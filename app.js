@@ -8,6 +8,12 @@ let thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
 let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
 let timeDom = document.querySelector('.carousel .time');
 
+let index = 0;
+const total = thumbnailItemsDom.length;
+let startX = 0, currentX = 0, isDragging = false;
+const threshold = 50; // px mínimo para considerar swipe
+const resistance = 0.35;
+
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
 let timeRunning = 500;
 let timeAutoNext = 7000;
