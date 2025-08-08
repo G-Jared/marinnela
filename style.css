@@ -4,25 +4,39 @@ body{
     background-color: #000;
     color: #eee;
     font-family: Poppins;
-    font-size: 12px;
+    font-size: 16px;
+    overflow: hidden;
+    min-width: 460px;
+    min-height: 460px;
 }
 a{
     text-decoration: none;
 }
 header{
-    width: 1140px;
-    max-width: 100%;
-    margin: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    min-width: 318px;
     height: 50px;
     display: flex;
     align-items: center;
     position: relative;
     z-index: 100;
-    background: #eee;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0 0 12px 12px;
+    /* transform: translateX(100%); */
+    /* transform: translateX(-50%); */
 }
 header a{
-    color: #000;
-    margin-right: 40px;
+    color: #eee;
+    margin: 20px;
 }
 /* carousel */
 .carousel{
@@ -55,13 +69,16 @@ header a{
     justify-content: center;
     align-items:first baseline;
     z-index: 100;
-    top: 8%;
+    top: 4%;
     width: 10vw;
     height: 10vw;
-    left: 10px;
+    min-width: 100px;
+    min-height: 100px;
+    left: calc(4vh);
     box-sizing: border-box;
     border-radius: 50%;
     background: #ffffff;
+    transition: all .3s;
 }
 .carousel .list .item .author{
     font-weight: bold;
@@ -151,7 +168,8 @@ header a{
     border: none;
     color: #fff;
     font-family: monospace;
-    font-weight: bold;
+    font-size: 1.4rem;
+    /* font-weight: bold; */
     transition: .5s;
 }
 .arrows button:hover{
@@ -315,5 +333,11 @@ header a{
     }
     .carousel .list .item .content .title{
         font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .carousel .content{
+        top:10%
     }
 }
