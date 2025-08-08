@@ -6,8 +6,6 @@ body{
     font-family: Poppins;
     font-size: 16px;
     overflow: hidden;
-    min-width: 460px;
-    min-height: 460px;
 }
 a{
     text-decoration: none;
@@ -69,12 +67,12 @@ header a{
     justify-content: center;
     align-items:first baseline;
     z-index: 100;
-    top: 4%;
+    top: 2%;
     width: 10vw;
     height: 10vw;
-    min-width: 100px;
-    min-height: 100px;
-    left: calc(4vh);
+    min-width: 80px;
+    min-height: 80px;
+    left: calc(2vh);
     box-sizing: border-box;
     border-radius: 50%;
     background: #ffffff;
@@ -338,6 +336,6 @@ header a{
 
 @media screen and (max-width: 550px) {
     .carousel .content{
-        top:10%
+        top:6%;
     }
 }
